@@ -1,0 +1,20 @@
+<template name="group">
+  <li>
+    <button class="delete-group">&times;</button>
+    <input type="checkbox" checked="{{checked}}" class="toggle-group" />
+    <span class="text bold">{{name}}</span>
+    <ul>
+      {{#each this.numbers}}
+        <li>
+          <button class="delete-number">&times;</button>
+          <input type="checkbox" checked="{{checked}}" class="toggle-number" />
+          <span class="text">{{number}}</span>
+        </li>
+      {{/each}}
+    </ul>
+
+    <form class="new-number">
+      <input type="text" name="number" placeholder="Enter a number to add to this group..." />
+    </form>
+  </li>
+</template>
